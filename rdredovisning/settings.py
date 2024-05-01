@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ["rdredovisning.herokuapp.com","localhost"]
-# ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com', '8000-mamuzaan-rdredovisning-cd9zt90n844.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com', '8000-mamuzaan-rdredovisning-cd9zt90n844.ws-eu110.gitpod.io']
 
 
 # Application definition

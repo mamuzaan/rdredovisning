@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Your Website Title{% endblock %}</title>
+    <!-- Add your CSS links here -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- Add your JavaScript links here -->
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+</header>
+
+<main>
+    {% block content %}
+    <!-- Content of each individual page will be inserted here -->
+    {% endblock %}
+</main>
+
+<footer>
+    <!-- Add your footer content here -->
+    <p>&copy; {% now "Y" %} Your Website Name</p>
+</footer>
+
+</body>
+</html>
