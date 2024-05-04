@@ -180,3 +180,12 @@ ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'  # Or 'https' if your site uses HTTPS
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"  # Use console backend for local development
 DEFAULT_FROM_EMAIL = "mamuzaan@yahoo.com"  # Set your email address
 NOTIFY_EMAIL = ""  # Set recipient email address
+
+SUMMERNOTE_CONFIG = {
+    # You can put custom Summernote settings
+    'summernote': {
+        # Change editor size
+        'width': '100%',
+        'height': '500'
+    },
+}

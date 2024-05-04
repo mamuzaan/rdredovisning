@@ -16,7 +16,7 @@
             integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
+        <link rel="icon" type="image/png" href="media/favicon_io/favicon-32x32.png">
     </head>
     <body class="d-flex flex-column h-100 main-bg">
         <header>
@@ -41,7 +41,7 @@
                             <li class="nav-item active pl-1">
                                 <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Categories
                             </a>
@@ -52,7 +52,7 @@
                                 {% endfor %}
                                 </li>
                             </ul>
-                            </li>
+                            </li> -->
                             {% if user.is_authenticated %}
                             <li class="nav-item pl-1">
                                 <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -95,7 +95,7 @@
         
 
         <!-- footer -->
-        <footer class="footer mt-auto">
+        <!-- <footer class="footer mt-auto">
             <div class="jumbotron jumbotron-fluid bg-secondary mt-3 mb-0">
                 <div class="container">
                     <div class="row">
@@ -126,6 +126,7 @@
                                 <div class="card-body text-center">
                                 <h5 class="card-title text-white display-4 lead" style="font-size:30px">Follow Us</h5>
                                         <a href="https://www.facebook.com/people/RD-Redovisning/100075506638033/"><i class="fab fa-facebook-square fa-fw fa-2x text-light"></i></a>
+                                        <a href="https://www.linkedin.com/in/rana-md-sohel-153b4910/"><i class="fab fa-linkedin fa-fw fa-2x text-light"></i></a>
                                         <a href="#"><i class="fab fa-instagram-square fa-fw fa-2x text-light"></i></a>
                                         <a href="#"><i class="fab fa-youtube-square fa-fw fa-2x text-light"></i></a>
                                 </div>
@@ -134,7 +135,56 @@
                     </div>
                 </div>
             </div>
+        </footer> -->
+
+        <footer class="footer mt-auto bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card bg-dark border-0">
+                            <div class="card-body text-light text-center">
+                                <h3 class="card-title text-white">RD Redovisning</h3>
+                                <p class="lead">Skapad av © 2024<br>
+                                <a href="{% url 'blog' %}" class="text-light d-block lead">Redovisning Post</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3">
+                        <div class="card bg-dark border-0">
+                            <div class="card-body text-center">
+                                <h3 class="card-title text-white">Kontakta oss</h3>
+                                <p class="text-light d-block">Hjortvägen 37, Lgh 1102</p>
+                                <p class="text-light d-block">194 79 Upplands Väsby</p>
+                                <p class="text-light d-block"><i class="fa fa-phone mr-2"></i> +46 76 259 72 69</p>
+                                <p class="text-light d-block"><i class="fa fa-envelope mr-2"></i> msrana3059@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="card bg-dark border-0">
+                            <div class="card-body text-center">
+                                <h3 class="card-title text-white">Användarvillkor</h3>
+                                <p class="text-light d-block lead">Kommer snart</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3">
+                        <div class="card bg-dark border-0">
+                            <div class="card-body text-center">
+                                <h3 class="card-title text-white">Följ oss</h3>
+                                <a href="https://www.facebook.com/people/RD-Redovisning/100075506638033/"><i class="fab fa-facebook-square fa-fw fa-2x text-light"></i></a>
+                                <a href="https://www.linkedin.com/in/rana-md-sohel-153b4910/"><i class="fab fa-linkedin fa-fw fa-2x text-light"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
+        
         <script src="{% static 'js/script.js' %}"></script>
     </body>
 </html>
