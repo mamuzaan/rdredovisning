@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["rdredovisning.herokuapp.com","localhost"]
+ALLOWED_HOSTS = ["redovisning-0b5f786b3a0b.herokuapp.com/","localhost"]
 ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com', '8000-mamuzaan-rdredovisning-cd9zt90n844.ws-eu111.gitpod.io']
 
 # Application definition
@@ -123,6 +123,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 CSRF_TRUSTED_ORIGINS = [
     'http://8000-mamuzaan-rdredovisning-cd9zt90n844.ws-eu111.gitpod.io',
     'https://8000-mamuzaan-rdredovisning-cd9zt90n844.ws-eu111.gitpod.io',
+    'https://redovisning-0b5f786b3a0b.herokuapp.com/'
 ]
 
 # Password validation
