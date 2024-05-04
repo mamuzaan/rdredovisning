@@ -26,14 +26,20 @@
                     <div style="padding: 5px;">
                         <img src="{{ MEDIA_URL }}media/RD.png" alt="Logo" height="30">
                     </div>                    
-                    <h2><a class="navbar-brand text-white" href="{% url 'home' %}"><b> RD Redovisning</b></a></h2>
+                    <h2><a class="navbar-brand text-white" href="{% url 'home_page' %}"><b> RD Redovisning</b></a></h2>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nvbCollapse" aria-controls="nvbCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="nvbCollapse">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item active pl-1">
-                                <a class="nav-link" href="{% url 'home' %}"><i class="fa fa-home fa-fw mr-1"></i>Home</a>
+                                <a class="nav-link" href="{% url 'home_page' %}"><i class="fa fa-home fa-fw mr-1"></i>Home</a>
+                            </li>
+                            <li class="nav-item active pl-1">
+                                <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                            </li>
+                            <li class="nav-item active pl-1">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                             </li>
                             <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -83,46 +89,7 @@
         </div>
         
         <main class="flex-shrink-0 main-bg">
-            <div class="container px-4 py-5" id="featured-3">
-                <h2 class="pb-2 border-bottom">Columns with icons</h2>
-                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                  <div class="feature col">
-                    <div class="feature-icon bg-primary bg-gradient">
-                      <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
-                    </div>
-                    <h2>Featured title</h2>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                    <a href="#" class="icon-link">
-                      Call to action
-                      <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-                    </a>
-                  </div>
-                  <div class="feature col">
-                    <div class="feature-icon bg-primary bg-gradient">
-                      <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                    </div>
-                    <h2>Featured title</h2>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                    <a href="#" class="icon-link">
-                      Call to action
-                      <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-                    </a>
-                  </div>
-                  <div class="feature col">
-                    <div class="feature-icon bg-primary bg-gradient">
-                      <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
-                    </div>
-                    <h2>Featured title</h2>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                    <a href="#" class="icon-link">
-                      Call to action
-                      <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
             {% block content %}
-            <!-- Content Goes here -->
             {% endblock content %}
         </main>
         
@@ -135,9 +102,9 @@
                         <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
                             <div class="card bg-secondary border-0">
                                 <div class="card-body text-light text-center">
-                                    <h5 class="card-title text-white display-4" style="font-size:30px">Redovisning</h5>
+                                    <h5 class="card-title text-white display-4" style="font-size:30px">RD Redovisning</h5>
                                 <p class="d-inline lead">Created By © 2024<br>
-                                <a href="#" class="text-light d-block lead">Redovisning Post</a>
+                                <a href="{% url 'blog' %}" class="text-light d-block lead">Redovisning Post</a>
                                 </p>
         
                                 </div>
@@ -158,7 +125,7 @@
                             <div class="card bg-secondary border-0">
                                 <div class="card-body text-center">
                                 <h5 class="card-title text-white display-4 lead" style="font-size:30px">Follow Us</h5>
-                                        <a href="https://www.facebook.com/profile.php?id=100075506638033"><i class="fab fa-facebook-square fa-fw fa-2x text-light"></i></a>
+                                        <a href="https://www.facebook.com/people/RD-Redovisning/100075506638033/"><i class="fab fa-facebook-square fa-fw fa-2x text-light"></i></a>
                                         <a href="#"><i class="fab fa-instagram-square fa-fw fa-2x text-light"></i></a>
                                         <a href="#"><i class="fab fa-youtube-square fa-fw fa-2x text-light"></i></a>
                                 </div>

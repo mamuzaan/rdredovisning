@@ -2,8 +2,11 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, Category
-from .forms import CommentForm, PostForm, EditForm
+from .forms import CommentForm, PostForm, EditForm, ContactusForm
 from django.urls import reverse_lazy
+from django.core.mail import send_mail
+from django.views.generic.edit import FormView
+from django.views.generic import TemplateView
 
 
 class PostList(generic.ListView):
@@ -121,4 +124,27 @@ def category_list(request):
     context = {
         'category_list': category_list,
     }
-    return context
+    return render(request, 'category.html', context)
+
+
+def home_page(request):
+    # Your logic for rendering the blog page goes here
+    return render(request, 'home_page.html')  # Replace 'blog.html' with the actual template name for your blog page
+
+
+class ContactFormView(generic.FormView):
+    template_name = "contact_form.html"
+    form_class = ContactusForm
+    # success_url = "/success/"
+    success_url = reverse_lazy("success")  # Redirect to the success page
+    
+    def form_valid(self, form):
+        name = form.cleaned_data['name']
+        email = form.cleaned_data['email']
+        message = form.cleaned_data['message']
+        # Process the form data here...
+        return super().form_valid(form)
+
+
+class SuccessView(generic.TemplateView):
+    template_name = "success.html"
