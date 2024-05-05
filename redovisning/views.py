@@ -105,7 +105,6 @@ class Delete(generic.DeleteView):
     success_url = reverse_lazy('home')
 
 
-# Category
 class CatListView(generic.ListView):
     template_name = 'category.html'
     context_object_name = 'catlist'
@@ -128,8 +127,7 @@ def category_list(request):
 
 
 def home_page(request):
-    # Your logic for rendering the blog page goes here
-    return render(request, 'home_page.html')  # Replace 'blog.html' with the actual template name for your blog page
+    return render(request, 'home_page.html')
 
 
 class ContactFormView(generic.FormView):
